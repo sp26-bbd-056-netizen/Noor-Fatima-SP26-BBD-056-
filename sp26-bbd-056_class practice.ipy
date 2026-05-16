@@ -1,0 +1,495 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "13f20c70-7d9e-41e1-aa02-f564d2fc83b2",
+   "metadata": {},
+   "source": [
+    "### Name: Noor Fatima\n",
+    "### Reg. number : sp26_bbd_056\n",
+    "### Program : BBD"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ee8fc42d-9881-4ab1-9d24-007c7147996c",
+   "metadata": {},
+   "source": [
+    "### Question 1\n",
+    "### Class Person:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "021b7ae1-20fa-429c-8801-4843b304e5aa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Person: Ali, Age: 22, City: Lahore\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Person:\n",
+    "    def __init__(self, name, age, city):\n",
+    "        self.name = name\n",
+    "        self.age  = age\n",
+    "        self.city = city\n",
+    "\n",
+    "    def __repr__(self):\n",
+    "        return f\"Person: {self.name}, Age: {self.age}, City: {self.city}\"\n",
+    "\n",
+    "\n",
+    "p = Person(\"Ali\", 22, \"Lahore\")\n",
+    "print(p)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fbfa35a1-2230-4a7e-b428-75c52360d652",
+   "metadata": {},
+   "source": [
+    "### Question 2\n",
+    "### class car:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "c0f85291-cb10-4773-b8fe-e8782ebd077f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Make  : Toyota\n",
+      "Model : Corolla\n",
+      "Year  : 2022\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Car:\n",
+    "    def __init__(self, make, model, year):\n",
+    "        self.make  = make\n",
+    "        self.model = model\n",
+    "        self.year  = year\n",
+    "\n",
+    "    def display(self):\n",
+    "        print(f\"Make  : {self.make}\")\n",
+    "        print(f\"Model : {self.model}\")\n",
+    "        print(f\"Year  : {self.year}\")\n",
+    "\n",
+    "c = Car(\"Toyota\", \"Corolla\", 2022)\n",
+    "c.display()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "438419bd-66d2-4af1-bfd3-cba5b1a83d3a",
+   "metadata": {},
+   "source": [
+    "### Question 3\n",
+    "### circle-area and circumference"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "d709cfa7-07e4-4ec0-a57a-4d89e45fb57d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Radius       : 5\n",
+      "Area         : 78.5398\n",
+      "Circumference: 31.4159\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "import math\n",
+    "\n",
+    "class Circle:\n",
+    "    def __init__(self, radius):\n",
+    "        self.radius = radius\n",
+    "\n",
+    "    def area(self):\n",
+    "        return round(math.pi * self.radius**2, 4)\n",
+    "\n",
+    "    def circumference(self):\n",
+    "        return round(2 * math.pi * self.radius, 4)\n",
+    "\n",
+    "c = Circle(5)\n",
+    "print(\"Radius       :\", c.radius)\n",
+    "print(\"Area         :\", c.area())\n",
+    "print(\"Circumference:\", c.circumference())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ce2e0cf-c4c6-4b92-b4b8-7879c44c4ee1",
+   "metadata": {},
+   "source": [
+    "### Question 4\n",
+    "### Rectangle_area and perimeter"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "084264bd-7e86-47b0-984a-c6430323cd83",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Length   : 4\n",
+      "Width    : 6\n",
+      "Area     : 24\n",
+      "Perimeter: 20\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Rectangle:\n",
+    "    def __init__(self, length, width):\n",
+    "        self.length = length\n",
+    "        self.width  = width\n",
+    "\n",
+    "    def area(self):\n",
+    "        return self.length * self.width\n",
+    "\n",
+    "    def perimeter(self):\n",
+    "        return 2 * (self.length + self.width)\n",
+    "\n",
+    "    def display(self):\n",
+    "        print(f\"Length   : {self.length}\")\n",
+    "        print(f\"Width    : {self.width}\")\n",
+    "        print(f\"Area     : {self.area()}\")\n",
+    "        print(f\"Perimeter: {self.perimeter()}\")\n",
+    "\n",
+    "\n",
+    "r = Rectangle(4, 6)\n",
+    "r.display()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "319e4b67-d8ee-4c3a-9941-8f434a1ace9c",
+   "metadata": {},
+   "source": [
+    "### Question 5\n",
+    "### Student_average amrks"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "13b9aa60-3413-4ba3-bbba-42fc4d445b2d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Name       : Sara\n",
+      "Roll No    : 101\n",
+      "Marks      : [88, 76, 92, 85, 90]\n",
+      "Average    : 86.20\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Student:\n",
+    "    def __init__(self, name, roll_number, marks):\n",
+    "        self.name        = name\n",
+    "        self.roll_number = roll_number\n",
+    "        self.marks       = marks\n",
+    "\n",
+    "    def average(self):\n",
+    "        return sum(self.marks) / len(self.marks)\n",
+    "\n",
+    "    def display(self):\n",
+    "        print(f\"Name       : {self.name}\")\n",
+    "        print(f\"Roll No    : {self.roll_number}\")\n",
+    "        print(f\"Marks      : {self.marks}\")\n",
+    "        print(f\"Average    : {self.average():.2f}\")\n",
+    "\n",
+    "s = Student(\"Sara\", 101, [88, 76, 92, 85, 90])\n",
+    "s.display()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "afb117c7-e245-49fe-b97d-8de871f0b128",
+   "metadata": {},
+   "source": [
+    "### Question 6\n",
+    "### Book class:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "9406a278-3356-48d2-9013-e0dcc75dd95a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Title  : Clean Code\n",
+      "Author : Robert C. Martin\n",
+      "Year   : 2008\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Book:\n",
+    "    def __init__(self, title, author, year):\n",
+    "        self.title  = title\n",
+    "        self.author = author\n",
+    "        self.year   = year\n",
+    "\n",
+    "    def display(self):\n",
+    "        print(f\"Title  : {self.title}\")\n",
+    "        print(f\"Author : {self.author}\")\n",
+    "        print(f\"Year   : {self.year}\")\n",
+    "\n",
+    "b = Book(\"Clean Code\", \"Robert C. Martin\", 2008)\n",
+    "b.display()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7204e879-940e-4e65-bb62-adefc2761e81",
+   "metadata": {},
+   "source": [
+    "### Question 7:\n",
+    "### Employee class:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "97497de6-e1bb-4e9e-be75-651cf9a3e211",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Name       : Umar\n",
+      "Designation: Software Engineer\n",
+      "Salary     : Rs 75,000\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Employee:\n",
+    "    def __init__(self, name, salary, designation):\n",
+    "        self.name        = name\n",
+    "        self.salary      = salary\n",
+    "        self.designation = designation\n",
+    "\n",
+    "    def display(self):\n",
+    "        print(f\"Name       : {self.name}\")\n",
+    "        print(f\"Designation: {self.designation}\")\n",
+    "        print(f\"Salary     : Rs {self.salary:,}\")\n",
+    "\n",
+    "e = Employee(\"Umar\", 75000, \"Software Engineer\")\n",
+    "e.display()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3c41506f-b699-4700-8ad0-971945884a23",
+   "metadata": {},
+   "source": [
+    "### Question 8\n",
+    "### Bank-deposit and withdraw:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "52983686-c0ce-4058-bef2-5db6883c2375",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Account   : PK-001\n",
+      "Holder    : Hassan\n",
+      "Opening   : Rs 10,000\n",
+      "---\n",
+      "Deposited : Rs 5,000\n",
+      "Balance   : Rs 15,000\n",
+      "---\n",
+      "Withdrew  : Rs 3,000\n",
+      "Balance   : Rs 12,000\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Bank:\n",
+    "    def __init__(self, name, acc_no, balance=0):\n",
+    "        self.name    = name\n",
+    "        self.acc_no  = acc_no\n",
+    "        self._balance = balance\n",
+    "\n",
+    "    def deposit(self, amount):\n",
+    "        self._balance += amount\n",
+    "        print(f\"Deposited : Rs {amount:,}\")\n",
+    "        print(f\"Balance   : Rs {self._balance:,}\")\n",
+    "\n",
+    "    def withdraw(self, amount):\n",
+    "        if amount > self._balance:\n",
+    "            print(\"Insufficient funds!\")\n",
+    "        else:\n",
+    "            self._balance -= amount\n",
+    "            print(f\"Withdrew  : Rs {amount:,}\")\n",
+    "            print(f\"Balance   : Rs {self._balance:,}\")\n",
+    "\n",
+    "acc = Bank(\"Hassan\", \"PK-001\", 10000)\n",
+    "print(f\"Account   : {acc.acc_no}\")\n",
+    "print(f\"Holder    : {acc.name}\")\n",
+    "print(f\"Opening   : Rs {acc._balance:,}\")\n",
+    "print(\"---\")\n",
+    "acc.deposit(5000)\n",
+    "print(\"---\")\n",
+    "acc.withdraw(3000)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "33a2b623-248b-41db-86ed-2906f66940cc",
+   "metadata": {},
+   "source": [
+    "### Question 9\n",
+    "### Shape-circle,triangle and rectangle: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "665acadc-ba82-41e1-a0ff-e960936ebe13",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Circle       -> Area = 153.94\n",
+      "Rectangle    -> Area = 24\n",
+      "Triangle     -> Area = 25.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "\n",
+    "class Shape:\n",
+    "    def area(self):\n",
+    "        raise NotImplementedError\n",
+    "\n",
+    "class Circle(Shape):\n",
+    "    def __init__(self, radius):\n",
+    "        self.radius = radius\n",
+    "    def area(self):\n",
+    "        return round(math.pi * self.radius**2, 2)\n",
+    "\n",
+    "class Rectangle(Shape):\n",
+    "    def __init__(self, length, width):\n",
+    "        self.length = length\n",
+    "        self.width  = width\n",
+    "    def area(self):\n",
+    "        return self.length * self.width\n",
+    "\n",
+    "class Triangle(Shape):\n",
+    "    def __init__(self, base, height):\n",
+    "        self.base   = base\n",
+    "        self.height = height\n",
+    "    def area(self):\n",
+    "        return 0.5 * self.base * self.height\n",
+    "\n",
+    "shapes = [Circle(7), Rectangle(3, 8), Triangle(5, 10)]\n",
+    "for s in shapes:\n",
+    "    print(f\"{s.__class__.__name__:12} -> Area = {s.area()}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1f303810-98b5-4ea6-b10d-156f2d09dcd0",
+   "metadata": {},
+   "source": [
+    "### Question 10\n",
+    "### Animal- dog,cat and cow:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4b389237-3731-4b83-9d26-82a664cff6eb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Animal:\n",
+    "    def __init__(self, name, sound):\n",
+    "        self.name  = name\n",
+    "        self.sound = sound\n",
+    "\n",
+    "    def speak(self):\n",
+    "        print(f\"{self.name} says: {self.sound}!\")\n",
+    "\n",
+    "class Dog(Animal):\n",
+    "    def __init__(self, name=\"Dog\"):\n",
+    "        super().__init__(name, \"Woof\")\n",
+    "\n",
+    "class Cat(Animal):\n",
+    "    def __init__(self, name=\"Cat\"):\n",
+    "        super().__init__(name, \"Meow\")\n",
+    "\n",
+    "class Cow(Animal):\n",
+    "    def __init__(self, name=\"Cow\"):\n",
+    "        super().__init__(name, \"Moo\")\n",
+    "\n",
+    "animals = [Dog(\"Rex\"), Cat(\"Whiskers\"), Cow(\"Bessie\")]\n",
+    "for a in animals:\n",
+    "    a.speak()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
